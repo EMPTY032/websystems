@@ -1,0 +1,280 @@
+section {
+  margin: 80px 0;
+}
+
+.homeSection {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  padding-top: 50px;
+  background-image: url("/public/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.homeSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.homeSection__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.homeSection__title {
+  margin-bottom: 8px;
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.homeSection__text {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+  margin-bottom: 48px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.homeSection__button {
+  margin-top: 2rem;
+}
+
+.aboutSection__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutSection__container_sub {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 64px;
+}
+.aboutSection__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.aboutSection__text {
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.aboutSection__list {
+  color: gray;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aboutSection__item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.aboutSection__item::before {
+  left: 0;
+  font-size: 20px;
+  top: -0.2rem;
+  font-family: "icomoon";
+  content: "✅";
+  position: absolute;
+}
+
+.servicesSection {
+  background-color: #f8f9fa;
+}
+
+.servicesSection__container {
+  padding: 80px 0;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.textLarge {
+  width: 100%;
+  max-width: 100%;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.service__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 360px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card__flaticon svg {
+  margin-left: -30%;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.card__text {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.testimonialsSection {
+  background-color: #f8f9fa;
+}
+
+.contact__list {
+  margin-top: 3rem;
+  list-style: none;
+  display: grid;
+
+  text-align: center;
+}
+
+.contact__link {
+  color: #0d6efd;
+  text-decoration: none;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact__icon {
+  margin-bottom: 12px;
+}
+
+.contact__item:nth-child(1) .contact__icon::before {
+  content: "📍";
+  position: relative;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+.contact__item:nth-child(2) .contact__icon::before {
+  content: "📞";
+  position: relative;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+.contact__item:nth-child(3) .contact__icon::before {
+  content: "✉️";
+  position: relative;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+@media (min-width: 576px) {
+  .service__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .textLarge {
+    max-width: 700px;
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .aboutSection__container_sub {
+    grid-template-columns: 1fr 1fr;
+    gap: 95px;
+  }
+
+  .service__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 60px;
+  }
+
+  .textLarge {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .testimonialsSection {
+    padding: 8rem 0;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .service__container {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+  }
+
+  .textLarge {
+    font-size: 16px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+} */
